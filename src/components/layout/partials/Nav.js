@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Nav = ({
   className,
+  ID,
   ...props
 }) => {
 
@@ -17,6 +18,8 @@ const Nav = ({
       <nav
         {...props}
         className={classes}
+        id={ID}
+        role='navigation'
       >
         <ul>
             <li><Link to="/">Home</Link></li>

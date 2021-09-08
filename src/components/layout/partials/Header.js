@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
-import Logo from '../elements/Image';
-import SiteLogo from '../../assets/images/logo.png';
+import Logo from '../../elements/Image';
+import SiteLogo from '../../../assets/images/logo.png';
 import { Link } from 'react-router-dom';
 import NavBar from './Nav';
 
@@ -11,7 +11,8 @@ const Header = ({
 }) => {
 
   const classes = classNames(
-    'site-header',
+    'header',
+    'width-1700',
     className
   );
 
@@ -24,7 +25,7 @@ const Header = ({
         <Link className='site-logo' to='/'>
           <Logo src={SiteLogo} /> 
         </Link>
-        <NavBar/>
+        <NavBar ID='site-navigation' />
       </header>
     </>
   );

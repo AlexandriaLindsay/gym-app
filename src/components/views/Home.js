@@ -1,17 +1,24 @@
 import { hot } from 'react-hot-loader/root';
 import React, { Component } from 'react'
 import '../../assets/css/App.css';
+import LayoutDefault from '../layout/Layout';
 // import { Query } from 'react-apollo'
 // import gql from 'graphql-tag'
 // import { Link } from 'react-router-dom';
 
 class Home extends Component {
     render() {
-        document.title ="Welcome | here is your page title to display"; 
-        document.getElementsByTagName("META")[2].content="Your description about the page or site here to set dynamically";
+        document.title ="Spartan Gym | Cross Fitness Centre"; 
+        document.getElementsByTagName("META")[2].content="At Spartan Gym we are professional cross fit trainers that we take your training to the next level.";
         
         return (
             <>
+                <LayoutDefault
+                    className='content content-wrapper width-1700'
+                    role="main"
+                >
+                    hi
+                </LayoutDefault>
                 
                 {/* <Query query={gql`
                     {
