@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import Logo from '../../elements/Image';
-import SiteLogo from '../../../assets/images/logo.png';
+import SiteLogo from '../../../assets/images/spartan-logo.svg';
 import { Link } from 'react-router-dom';
 import NavBar from './Nav';
 

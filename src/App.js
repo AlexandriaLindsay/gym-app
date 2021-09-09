@@ -9,14 +9,14 @@ import Home from './components/views/Home.js';
 import MenuModal from './components/elements/MenuModal';
 import Nav from './components/layout/partials/Nav';
 import Footer from './components/layout/partials/Footer';
-import useScript from './assets/customHooks/UseEffect';
+import About from './components/views/About';
+import Contact from './components/views/Contact';
+// import $ from 'jquery';
 
 const client = new ApolloClient({ uri: 'https://diamondconstruction.ca/graphql' });
 
 function App() {
-  
-  useScript('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js');
-  
+
  
   return (
     <>
@@ -26,7 +26,9 @@ function App() {
           <Header />
           {/* CONTENT */}
           <Switch>
-            <Route path='/' exact component={Home}/>
+            <Route exact path='/' component={Home}/>
+            <Route path='/about-us' component={About}/>
+            <Route path='/contact' component={Contact}/>
           </Switch>
           {/* FOOTER */}
           <Footer />

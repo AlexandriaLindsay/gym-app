@@ -1,0 +1,2 @@
+Red: #C41E24
+body: #EDF0F2
