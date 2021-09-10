@@ -14,6 +14,8 @@ import Image from '../elements/Image'
 import Hero from '../../assets/images/weights-in-gym.jpg';
 import Social from '../../assets/images/social.svg';
 import Arrow from '../../assets/images/arrow-graphic.svg';
+import Section from '../layout/Section';
+import DoubleCol from '../layout/DoubleCol';
 
 
 class Home extends Component {
@@ -42,6 +44,20 @@ class Home extends Component {
                             <Image src={Hero} alt='Weights in the Spartan Gym' />
                         </div>
                     </div>
+
+                    <Section id='membership' className='width-1500'>
+                        <DoubleCol>
+
+                        </DoubleCol>
+
+                        <DoubleCol>
+                            <h2>Membership Plans</h2>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                        </DoubleCol>
+
+                    </Section>
                 </LayoutDefault>
                 
                 {/* <Query query={gql`
