@@ -7,6 +7,7 @@ const Image = ({
   width,
   height,
   alt,
+  title,
   link,
   ...props
 }) => {
@@ -19,6 +20,7 @@ const Image = ({
       src={src}
       width={width}
       height={height}
+      title={title}
       alt={alt} />
   );
 }

@@ -2,9 +2,19 @@ import { hot } from 'react-hot-loader/root';
 import React, { Component } from 'react'
 import '../../assets/css/App.css';
 import LayoutDefault from '../layout/Layout';
+import Image from '../elements/Image'
+// import { Link } from 'react-router-dom';
 // import { Query } from 'react-apollo'
 // import gql from 'graphql-tag'
 // import { Link } from 'react-router-dom';
+
+/*****************************************
+ * IMAGES
+ *****************************************/
+import Hero from '../../assets/images/weights-in-gym.jpg';
+import Social from '../../assets/images/social.svg';
+import Arrow from '../../assets/images/arrow-graphic.svg';
+
 
 class Home extends Component {
     render() {
@@ -14,10 +24,24 @@ class Home extends Component {
         return (
             <>
                 <LayoutDefault
-                    className='content content-wrapper width-1700'
+                    className='content content-wrapper width-1500'
                     role="main"
                 >
-                    hi
+                    <div className='hero'>
+                        <div className='hero-content'>
+                            <p>Find out if you can</p>
+                            <h1 style={{ textTransform: 'uppercase' }}>Su<br />rvi<br />ve</h1>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labor.</p>
+                            <div className='social'>
+                                <Image src={Social} title='See us on Social Media' alt='See us on Social Media' />
+                            </div>
+                            <Image className='arrow-graphic' src={Arrow} alt='Arrow Icon' />
+                        </div>
+
+                        <div className='hero-img'>
+                            <Image src={Hero} alt='Weights in the Spartan Gym' />
+                        </div>
+                    </div>
                 </LayoutDefault>
                 
                 {/* <Query query={gql`
