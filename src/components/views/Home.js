@@ -13,6 +13,10 @@ import Image from '../elements/Image'
  *****************************************/
 import Hero from '../../assets/images/weights-in-gym.jpg';
 import Social from '../../assets/images/social.svg';
+import MemberImage from '../../assets/images/guy-with-abs.jpg';
+import MemberImage2 from '../../assets/images/woman-working-out.jpg';
+import MemberImage3 from '../../assets/images/steel-weights.jpg';
+import MemberImage4 from '../../assets/images/fitness-equipment.jpg';
 import Arrow from '../../assets/images/arrow-graphic.svg';
 import Section from '../layout/Section';
 import DoubleCol from '../layout/DoubleCol';
@@ -45,9 +49,39 @@ class Home extends Component {
                         </div>
                     </div>
 
-                    <Section id='membership' className='width-1500'>
+                    <Section id='membership'>
                         <DoubleCol>
+                            <DoubleCol>
+                                <Image src={MemberImage} alt='Man Showing His Abs' />
+                                <div className='membership-content'>
+                                    <h2>12-Month Plan</h2>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                </div>
+                            </DoubleCol>
 
+                            <DoubleCol>
+                                <Image src={MemberImage2} alt='Woman Working Out' />
+                                <div className='membership-content'>
+                                    <h2>12-Month Plan</h2>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                </div>
+                            </DoubleCol>
+
+                            <DoubleCol>
+                                <Image src={MemberImage3} alt='Steel Weights' />
+                                <div className='membership-content'>
+                                    <h2>12-Month Plan</h2>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                </div>
+                            </DoubleCol>
+
+                            <DoubleCol>
+                                <Image src={MemberImage4} alt='Fitness Equipment' />
+                                <div className='membership-content'>
+                                    <h2>12-Month Plan</h2>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                                </div>
+                            </DoubleCol>
                         </DoubleCol>
 
                         <DoubleCol>

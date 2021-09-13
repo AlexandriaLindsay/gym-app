@@ -150,6 +150,11 @@
         margin-bottom: 0;
         padding: 0 76px;
     }
+
+    img {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .tripleCol {
@@ -851,6 +856,31 @@ header {
 /**********************************
 * HOME PAGE
 ***********************************/
+
+#membership {
+    .doubleCol {
+        padding: 0;
+        position: relative;
+        .membership-content {
+            position: absolute;
+            bottom: -19%;
+            left: 50%;
+            width: 80%;
+            transform: translate(-50%,-50%);
+            p,h2 {
+                color: @white;
+            }
+        }
+    }
+    & > .doubleCol:first-of-type {
+        width: 64%;
+    }
+
+    & > .doubleCol:nth-of-type(2) {
+        width: 36%;
+        padding-left: 121px;
+    }
+}
 
 
 /**********************************
