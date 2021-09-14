@@ -165,17 +165,15 @@
 }
 
 .grad {
-    .gradPosition();
-    background: -moz-linear-gradient(left, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0) 63%, rgba(0,0,0,0) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(left, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 63%,rgba(0,0,0,0) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to right, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 63%,rgba(0,0,0,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
-    &.mobile {
-        background: -moz-linear-gradient(left, rgba(0,0,0,0.34) 0%, rgba(0,0,0,0.34) 20%, rgba(0,0,0,0.34) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(left, rgba(0,0,0,0.34) 0%,rgba(0,0,0,0.34) 20%,rgba(0,0,0,0.34) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to right, rgba(0,0,0,0.34) 0%,rgba(0,0,0,0.34) 20%,rgba(0,0,0,0.34) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#57000000', endColorstr='#57000000',GradientType=1 );
-    }
+    top: 173px;
+    bottom: 16px;
+    right: 11px;
+    left: 11px;
+    position: absolute;
+    background: -moz-linear-gradient(top, rgba(0,0,0,0) -1%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 59%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 59%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 59%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
 }
 
 .grecaptcha-badge {
@@ -559,7 +557,7 @@ h1,h2,h3,h4,h5,h6 {
     color: @red;
     font-size: 23px;
     line-height: 0.75;
-    margin-bottom: 0px;
+    margin-bottom: 17px;
     font-weight: 500;
     @media @min992 {
         font-size: 176px;
@@ -568,9 +566,9 @@ h1,h2,h3,h4,h5,h6 {
 
 h2 {
     font-size: 16px;
-    color: @red;
+    color: @black;
     @media @min992 {
-        font-size: 20px;
+        font-size: 60px;
     }
    
 }
@@ -579,14 +577,13 @@ h2 {
 h3 {
     font-weight: 500;
     font-size: 25px;
-    line-height: 1.5;
-    margin-bottom: 22px;
+    line-height: 1;
+    margin-bottom: 0px;
+    color: @white;
     @media @min992 {
-        font-size: 25px;
+        font-size: 36px;
     }
-    @media @min1500 {
-        font-size: 25px;
-    }
+   
 }
 
 h4 {
@@ -606,7 +603,7 @@ p,li,a,td,span, legend, label, .wpcf7-response-output {
     margin-bottom: 18px;
     font-weight: 500;
     @media @min992 {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -669,21 +666,24 @@ button:focus {
 }
 
 .custom-btn {
-    background-color: @red;
-    border: 2px solid @red;
-    padding: 8px 0px;
+    background-color: transparent;
+    border: 6px solid @red;
+    padding: 3px 0px;
+    padding-top: 7px;
     font-weight: 300;
     text-decoration: none;
     display: block;
     font-family: @mont;
     font-size: 20px;
-    width: 209px;
-    border-radius: 50px;
+    width: 163px;
+    color: @red;
+    font-family: @teko;
+    margin-top: 54px;
     .center();
   
     &:hover {
-        background-color: transparent;
-        color: @red;
+        background-color: @red;
+        color: @white;
         opacity: 1;
     }
 }
@@ -826,7 +826,7 @@ header {
         .social {
             position: absolute;
             width: 23px;
-            bottom: 0;
+            bottom: -37px;
             left: 4px;
         }
 
@@ -858,13 +858,23 @@ header {
 ***********************************/
 
 #membership {
+    margin-bottom: 0;
+    .arrow-graphic {
+        position: absolute;
+        width: 150px;
+        transform: rotate(180deg);
+        right: 0;
+        bottom: -114px;
+        z-index: -1;
+    }
     .doubleCol {
         padding: 0;
         position: relative;
+        padding: 12px;
         .membership-content {
             position: absolute;
-            bottom: -19%;
-            left: 50%;
+            bottom: -5%;
+            left: 52%;
             width: 80%;
             transform: translate(-50%,-50%);
             p,h2 {
@@ -878,11 +888,35 @@ header {
 
     & > .doubleCol:nth-of-type(2) {
         width: 36%;
-        padding-left: 121px;
+        padding-left: 93px;
     }
 }
 
+.completed-challenges {
+    margin-top: 95px;
+    .doubleCol {
+        padding: 0;
+    }
 
+    .doubleCol:first-of-type {
+        p {
+            font-family: @teko;
+            font-size: 18px;
+            margin-bottom: 40px;
+        }
+        padding-left: 152px;
+        padding-right: 312px;
+    }
+
+    h1 {
+        font-size: 280px;
+    }
+    span {
+        font-size: 60px;
+        font-family: @teko;
+        color: @red;
+    }
+}
 /**********************************
 * FOOTER
 ***********************************/
