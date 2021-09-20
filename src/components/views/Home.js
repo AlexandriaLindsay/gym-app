@@ -21,6 +21,9 @@ import MemberImage3 from '../../assets/images/steel-weights.jpg';
 import MemberImage4 from '../../assets/images/fitness-equipment.jpg';
 import results from '../../assets/images/results.jpg';
 import Arrow from '../../assets/images/arrow-graphic.svg';
+import session1 from '../../assets/images/cross-fit.jpg';
+import session2 from '../../assets/images/yoga-class.jpg';
+import session3 from '../../assets/images/heavy-rope-training.jpg';
 
 
 
@@ -111,6 +114,19 @@ class Home extends Component {
 
                         <DoubleCol>
                             <Image src={results} alt='Man Bench Dead Lifting' />
+                        </DoubleCol>
+                    </Section>
+
+                    <Section className='popular-sessions'>
+                        <h2>Popular Sessions</h2>
+                        <DoubleCol>
+                            <Image src={session1} alt='Rope Training' />
+                        </DoubleCol>
+
+                        <DoubleCol>
+                            <h3 style={{ textTransform: 'uppercase' }}>Key Skills</h3>
+                            <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor.</h3>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
                         </DoubleCol>
                     </Section>
                 </LayoutDefault>
