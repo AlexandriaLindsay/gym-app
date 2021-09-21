@@ -917,6 +917,72 @@ header {
         color: @red;
     }
 }
+
+.popular-sessions {
+    margin-bottom: 157px;
+    & > h2 {
+        margin-bottom: 50px;
+    }
+    .doubleCol:nth-of-type(odd) {
+        padding-left: 0;
+    }
+
+    .doubleCol {
+        h2 {
+            font-size: 36px;
+        }
+    }
+
+    h3 {
+        color: @red;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .session-block {
+        margin-bottom: 40px;
+    }
+}
+
+.advice {
+    position: relative;
+    margin-top: 0;
+    text-align: right;
+    h1 {
+        position: absolute;
+        top: 248px;
+        left: -153px;
+        transform: rotate(-90deg);
+    }
+
+    .advice-img {
+        position: relative;
+        width: 88%;
+        float: right;
+        margin-bottom: 150px;
+        div {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            text-align: left;
+            background-color: @offWhite;
+            width: 35%;
+            padding: 52px 52px;
+        }
+
+        img {
+            width: 100%;
+        }
+    }  
+}
+
+footer {
+    clear: both;
+    background-image: url('../images/kick-boxer.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 /**********************************
 * FOOTER
 ***********************************/

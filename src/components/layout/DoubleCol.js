@@ -8,7 +8,7 @@ const DoubleCol = ({
   <>
     <div
         {...props}
-        className='doubleCol'
+        className="doubleCol"
     >
         {children}
     </div>

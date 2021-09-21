@@ -23,7 +23,8 @@ import results from '../../assets/images/results.jpg';
 import Arrow from '../../assets/images/arrow-graphic.svg';
 import session1 from '../../assets/images/cross-fit.jpg';
 import session2 from '../../assets/images/yoga-class.jpg';
-import session3 from '../../assets/images/heavy-rope-training.jpg';
+import session3 from '../../assets/images/ropes.jpg';
+import deadLift from '../../assets/images/man-doing-dead-lifts.jpg';
 
 
 
@@ -35,58 +36,58 @@ class Home extends Component {
         return (
             <>
                 <LayoutDefault
-                    className='content content-wrapper width-1500'
+                    className="content content-wrapper width-1500"
                     role="main"
                 >
-                    <div className='hero'>
-                        <div className='hero-content'>
+                    <div className="hero">
+                        <div className="hero-content">
                             <p>Find out if you can</p>
                             <h1 style={{ textTransform: 'uppercase' }}>Su<br />rvi<br />ve</h1>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labor.</p>
-                            <div className='social'>
-                                <Image src={Social} title='See us on Social Media' alt='See us on Social Media' />
+                            <div className="social">
+                                <Image src={Social} title="See us on Social Media" alt="See us on Social Media" />
                             </div>
-                            <Image className='arrow-graphic' src={Arrow} alt='Arrow Icon' />
+                            <Image className="arrow-graphic" src={Arrow} alt="Arrow Icon" />
                         </div>
 
-                        <div className='hero-img'>
-                            <Image src={Hero} alt='Weights in the Spartan Gym' />
+                        <div className="hero-img">
+                            <Image src={Hero} alt="Weights in the Spartan Gym" />
                         </div>
                     </div>
 
-                    <Section id='membership'>
+                    <Section id="membership">
                         <DoubleCol>
                             <DoubleCol>
-                                <div className='grad'></div>
-                                <Image src={MemberImage} alt='Man Showing His Abs' />
-                                <div className='membership-content'>
+                                <div className="grad"></div>
+                                <Image src={MemberImage} alt="Man Showing His Abs" />
+                                <div className="membership-content">
                                     <h3>12-Month Plan</h3>
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                                 </div>
                             </DoubleCol>
 
                             <DoubleCol>
-                                <div className='grad'></div>
-                                <Image src={MemberImage2} alt='Woman Working Out' />
-                                <div className='membership-content'>
+                                <div className="grad"></div>
+                                <Image src={MemberImage2} alt="Woman Working Out" />
+                                <div className="membership-content">
                                     <h3>12-Month Plan</h3>
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                                 </div>
                             </DoubleCol>
 
                             <DoubleCol>
-                                <div className='grad'></div>
-                                <Image src={MemberImage3} alt='Steel Weights' />
-                                <div className='membership-content'>
+                                <div className="grad"></div>
+                                <Image src={MemberImage3} alt="Steel Weights" />
+                                <div className="membership-content">
                                     <h3>12-Month Plan</h3>
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                                 </div>
                             </DoubleCol>
 
                             <DoubleCol>
-                                <div className='grad'></div>
-                                <Image src={MemberImage4} alt='Fitness Equipment' />
-                                <div className='membership-content'>
+                                <div className="grad"></div>
+                                <Image src={MemberImage4} alt="Fitness Equipment" />
+                                <div className="membership-content">
                                     <h3>12-Month Plan</h3>
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                                 </div>
@@ -98,37 +99,79 @@ class Home extends Component {
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                            <Link style={{ textTransform: 'uppercase' }} to='/about-us' className='custom-btn'>Sign Up</Link>
-                            <Image className='arrow-graphic' src={Arrow} alt='Arrow Icon' />
+                            <Link style={{ textTransform: 'uppercase' }} to="/about-us" className="custom-btn">Sign Up</Link>
+                            <Image className="arrow-graphic" src={Arrow} alt="Arrow Icon" />
                         </DoubleCol>
 
                     </Section>
 
-                    <Section className='completed-challenges'>
+                    <Section className="completed-challenges">
                         <DoubleCol>
                             <p style={{ textTransform: 'uppercase' }}>Completed Challenges</p>
                             <h1>13</h1>
                             <h2>You have <span>78%</span> chance for success</h2>
-                            <Link style={{ textTransform: 'uppercase' }} to='/about-us' className='custom-btn'>See More</Link>
+                            <Link style={{ textTransform: 'uppercase' }} to="/about-us" className="custom-btn">See More</Link>
                         </DoubleCol>
 
                         <DoubleCol>
-                            <Image src={results} alt='Man Bench Dead Lifting' />
+                            <Image src={results} alt="Man Bench Dead Lifting" />
                         </DoubleCol>
                     </Section>
 
-                    <Section className='popular-sessions'>
+                    <Section className="popular-sessions">
                         <h2>Popular Sessions</h2>
-                        <DoubleCol>
-                            <Image src={session1} alt='Rope Training' />
-                        </DoubleCol>
 
-                        <DoubleCol>
-                            <h3 style={{ textTransform: 'uppercase' }}>Key Skills</h3>
-                            <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor.</h3>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-                        </DoubleCol>
+                        <div className="session-block">
+                            <DoubleCol>
+                                <Image src={session1} alt="Rope Training" />
+                            </DoubleCol>
+
+                            <DoubleCol>
+                                <h3 style={{ textTransform: 'uppercase' }}>Key Skills</h3>
+                                <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor.</h2>
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                                <Link className="custom-btn" to="#">FIND OUT MORE</Link>
+                            </DoubleCol>
+                        </div>
+
+                        <div className="session-block">
+                            <DoubleCol>
+                                <Image src={session2} alt="Yogo Class" />
+                            </DoubleCol>
+
+                            <DoubleCol>
+                                <h3 style={{ textTransform: 'uppercase' }}>Key Skills</h3>
+                                <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor.</h2>
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                                <Link className="custom-btn" to="#">FIND OUT MORE</Link>
+                            </DoubleCol>
+                        </div>
+
+                        <div className="session-block">
+                            <DoubleCol>
+                                <Image src={session3} alt="Rope Training" />
+                            </DoubleCol>
+
+                            <DoubleCol>
+                                <h3 style={{ textTransform: 'uppercase' }}>Key Skills</h3>
+                                <h2>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor.</h2>
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                                <Link className="custom-btn" to="#">FIND OUT MORE</Link>
+                            </DoubleCol>
+                        </div>
                     </Section>
+
+                    <Section className="advice">
+                        <h1>ADVICE</h1>
+                        <div className="advice-img">
+                            <div>
+                                <h2>Survival Mode</h2>
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                            </div>
+                            <Image width="100%" src={deadLift} alt="Man Dead Lifting" />
+                        </div>
+                    </Section>
+
                 </LayoutDefault>
                 
                 {/* <Query query={gql`
