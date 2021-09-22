@@ -3,7 +3,7 @@ import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import Header from './components/layout/partials/Header';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom'
 import './assets/css/App.css';
 import Home from './components/views/Home.js';
 import MenuModal from './components/elements/MenuModal';
@@ -13,7 +13,7 @@ import About from './components/views/About';
 import Contact from './components/views/Contact';
 // import $ from 'jquery';
 
-const client = new ApolloClient({ uri: 'https://diamondconstruction.ca/graphql' });
+const client = new ApolloClient({ uri: 'https://charlie.staging.prufs.ca/graphql' });
 
 function App() {
 
@@ -21,22 +21,20 @@ function App() {
   return (
     <>
       <ApolloProvider client={client}>
-        <Router>
+        <BrowserRouter>
           {/* HEADER */}
           <Header />
           {/* CONTENT */}
-          <Switch>
-            <Route exact path='/' component={Home}/>
-            <Route path='/about-us' component={About}/>
-            <Route path='/contact' component={Contact}/>
-          </Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/about-us' component={About}/>
+          <Route path='/contact' component={Contact}/>
           {/* FOOTER */}
           <Footer />
           {/* MODAL MENU */}
           <MenuModal>
             <Nav />
           </MenuModal>
-        </Router>
+        </BrowserRouter>
       </ApolloProvider>
     </>
   );

@@ -6,8 +6,8 @@ import Image from '../elements/Image'
 import { Link } from 'react-router-dom';
 import Section from '../layout/Section';
 import DoubleCol from '../layout/DoubleCol';
-// import { Query } from 'react-apollo'
-// import gql from 'graphql-tag'
+import { Query } from 'react-apollo'
+import gql from 'graphql-tag'
 // import { Link } from 'react-router-dom';
 
 /*****************************************
@@ -174,13 +174,12 @@ class Home extends Component {
 
                 </LayoutDefault>
                 
-                {/* <Query query={gql`
+                { <Query query={gql`
                     {
                         pages {
                             edges {
                                 node {
-                                    title
-                                    slug
+                                    content
                                 }
                             }
                         }
@@ -200,8 +199,7 @@ class Home extends Component {
                                         data.pages.edges.map((page, key) => {
                                             return(
                                                 <div key={key}>
-                                                    <h2>{page.node.title}</h2>
-                                                    <Link to={page.node.slug}>Read More</Link>
+                                                    <h2>{page.node.content}</h2>
                                                 </div>
                                             )
                                         })
@@ -211,7 +209,7 @@ class Home extends Component {
                         }
                     }
     
-                </Query> */}
+                </Query>}
             </>
         );
     }
