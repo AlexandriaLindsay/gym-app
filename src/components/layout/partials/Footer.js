@@ -1,6 +1,9 @@
 import React from 'react';
 import Image from '../../elements/Image';
 import Logo from '../../../assets/images/spartan-logo-white.svg';
+import Nav from './Nav';
+import { Link } from 'react-router-dom';
+import Home from '../../views/Home';
 
 const Footer = ({
     ID,
@@ -12,7 +15,12 @@ const Footer = ({
                 {...props}
                 id='footer'
             >
-                <Image style={{ width: '191px' }} src={Logo} alt="Spartan Gym &amp; Training Centre Logo" />
+                <div className="width-1500">
+                    <Link to="/">
+                        <Image style={{ width: '191px' }} src={Logo} alt="Spartan Gym &amp; Training Centre Logo" />
+                    </Link>
+                    <Nav />
+                </div>
             </footer>
         </>
     );

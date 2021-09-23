@@ -171,15 +171,24 @@ class Home extends Component {
                             <Image width="100%" src={deadLift} alt="Man Dead Lifting" />
                         </div>
                     </Section>
-
-                </LayoutDefault>
-                
-                { <Query query={gql`
-                    {
+{/* 
+                    { <Query query={gql`
+                     {
                         pages {
                             edges {
                                 node {
                                     content
+                                      homePage {
+                                        membershipPlans
+                                        membershipPlansTest
+                                        imagetest {
+                                            sourceUrl(size: MEDIUM)
+                                            altText
+                                        }
+                                        lists {
+                                            listItem
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -189,9 +198,8 @@ class Home extends Component {
                 }>
                     {
                         ({ loading, error, data }) => {
-                            if( loading ) {
-                                return(<h1>Loading...</h1>)
-                            }
+                            if (loading) return '';
+                            if (error) return `Error! ${error.message}`;
     
                             return(
                                 <div>
@@ -199,7 +207,14 @@ class Home extends Component {
                                         data.pages.edges.map((page, key) => {
                                             return(
                                                 <div key={key}>
-                                                    <h2>{page.node.content}</h2>
+                                                    <h2>{page.node.homePage.membershipPlans}</h2>
+                                                    <Image src={page.node.homePage.imagetest.sourceUrl} alt={page.node.homePage.imagetest.altText}/>
+                                                    <ul>
+                                                    {page.node.homePage.lists.map((item, key) => (
+                                                        <li key={key}>{item.listItem}</li>
+                                                    ))}                               
+                                           
+                                                    </ul>
                                                 </div>
                                             )
                                         })
@@ -209,7 +224,10 @@ class Home extends Component {
                         }
                     }
     
-                </Query>}
+                </Query>} */}
+
+                </LayoutDefault>
+                
             </>
         );
     }
