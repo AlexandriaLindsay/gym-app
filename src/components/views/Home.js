@@ -6,8 +6,8 @@ import Image from '../elements/Image'
 import { Link } from 'react-router-dom';
 import Section from '../layout/Section';
 import DoubleCol from '../layout/DoubleCol';
-import { Query } from 'react-apollo'
-import gql from 'graphql-tag'
+// import { Query } from 'react-apollo'
+// import gql from 'graphql-tag'
 // import { Link } from 'react-router-dom';
 
 /*****************************************

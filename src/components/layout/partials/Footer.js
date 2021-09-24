@@ -3,7 +3,8 @@ import Image from '../../elements/Image';
 import Logo from '../../../assets/images/spartan-logo-white.svg';
 import Nav from './Nav';
 import { Link } from 'react-router-dom';
-import Home from '../../views/Home';
+import { scroll } from '../../../assets/js/Functions';
+
 
 const Footer = ({
     ID,
@@ -22,6 +23,7 @@ const Footer = ({
                     <Nav />
                 </div>
             </footer>
+            <button id="return-to-top" onClick={() => scroll('main-header')}><i className="glyphicon glyphicon-chevron-up" aria-hidden="true"></i></button>
         </>
     );
 }

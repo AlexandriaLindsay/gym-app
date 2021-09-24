@@ -15,6 +15,7 @@ import Contact from './components/views/Contact';
 
 const client = new ApolloClient({ uri: 'https://charlie.staging.prufs.ca/graphql' });
 
+
 function App() {
 
  
@@ -23,7 +24,7 @@ function App() {
       <ApolloProvider client={client}>
         <BrowserRouter>
           {/* HEADER */}
-          <Header />
+          <Header ID="main-header" />
           {/* CONTENT */}
           <Route exact path='/' component={Home}/>
           <Route path='/about-us' component={About}/>

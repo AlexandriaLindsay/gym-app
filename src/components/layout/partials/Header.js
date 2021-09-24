@@ -7,6 +7,7 @@ import NavBar from './Nav';
 
 const Header = ({
   className,
+  ID,
   ...props
 }) => {
 
@@ -21,6 +22,7 @@ const Header = ({
       <header
         {...props}
         className={classes}
+        id={ID}
       >
         <Link className='site-logo' to='/'>
           <Logo src={SiteLogo} /> 

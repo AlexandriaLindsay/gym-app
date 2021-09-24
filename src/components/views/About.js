@@ -1,5 +1,9 @@
+import { hot } from 'react-hot-loader/root';
 import React, { Component } from 'react'
 import '../../assets/css/App.css';
+import LayoutDefault from '../layout/Layout';
+import Hero from '../../assets/images/guy-working-out.jpg'
+import Image from '../elements/Image';
 
 class About extends Component {
     render() {
@@ -8,10 +12,15 @@ class About extends Component {
         
         return (
             <>
-                <div>About Page</div>
+                <LayoutDefault>
+                    <div className="sub-hero">
+                        <Image width="100%" src={Hero} alt="Guy Working Out" />
+                        <h1 style={{ textTransform: 'uppercase' }} className="threeD">About Us</h1>
+                    </div>
+                </LayoutDefault>
             </>
         );
     }
   
 }
-export default About;
+export default hot(About);
