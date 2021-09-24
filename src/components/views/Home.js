@@ -6,8 +6,9 @@ import Image from '../elements/Image'
 import { Link } from 'react-router-dom';
 import Section from '../layout/Section';
 import DoubleCol from '../layout/DoubleCol';
-// import { Query } from 'react-apollo'
-// import gql from 'graphql-tag'
+import { Query } from 'react-apollo'
+import gql from 'graphql-tag'
+import DOMPurify from 'dompurify';
 // import { Link } from 'react-router-dom';
 
 /*****************************************
@@ -30,8 +31,11 @@ import deadLift from '../../assets/images/man-doing-dead-lifts.jpg';
 
 class Home extends Component {
     render() {
-        document.title ="Spartan Gym | Cross Fitness Centre"; 
+        document.title ="Spartan Gym — Cross Fitness Centre"; 
         document.getElementsByTagName("META")[2].content="At Spartan Gym we are professional cross fit trainers that we take your training to the next level.";
+        
+        // SANITIZE HTML DATA
+        var sanitizer = DOMPurify.sanitize;
         
         return (
             <>
@@ -41,12 +45,53 @@ class Home extends Component {
                 >
                     <div className="hero">
                         <div className="hero-content">
-                            <p>Find out if you can</p>
+                            <p className="side">Find out if you can</p>
                             <h1 style={{ textTransform: 'uppercase' }}>Su<br />rvi<br />ve</h1>
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labor.</p>
+
+                            {/* START INTRO QUERY */}
+                            <Query query={gql`
+                                {
+                                    pages {
+                                        edges {
+                                            node {
+                                                content
+                                                  home {
+                                                  intro
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            `
+                
+                            }>
+                                {
+                                    ({ loading, error, data }) => {
+                                        if (loading) return '';
+                                        if (error) return `Error! ${error.message}`;
+                
+                                        return(
+                                            <>
+                                                {
+                                                    data.pages.edges.map((page, key) => {
+                                                        return(
+                                                            <div key={key}>
+                                                            <div className="hero-san" dangerouslySetInnerHTML={{__html: sanitizer(page.node.home.intro)}} />                                                            </div>
+                                                        )
+                                                    })
+                                                }
+                                            </>
+                                        )
+                                    }
+                                }
+                
+                            </Query>
+                            {/* END INTRO QUERY */}
+
                             <div className="social">
                                 <Image src={Social} title="See us on Social Media" alt="See us on Social Media" />
                             </div>
+
                             <Image className="arrow-graphic" src={Arrow} alt="Arrow Icon" />
                         </div>
 
@@ -171,60 +216,6 @@ class Home extends Component {
                             <Image width="100%" src={deadLift} alt="Man Dead Lifting" />
                         </div>
                     </Section>
-{/* 
-                    { <Query query={gql`
-                     {
-                        pages {
-                            edges {
-                                node {
-                                    content
-                                      homePage {
-                                        membershipPlans
-                                        membershipPlansTest
-                                        imagetest {
-                                            sourceUrl(size: MEDIUM)
-                                            altText
-                                        }
-                                        lists {
-                                            listItem
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                `
-    
-                }>
-                    {
-                        ({ loading, error, data }) => {
-                            if (loading) return '';
-                            if (error) return `Error! ${error.message}`;
-    
-                            return(
-                                <div>
-                                    {
-                                        data.pages.edges.map((page, key) => {
-                                            return(
-                                                <div key={key}>
-                                                    <h2>{page.node.homePage.membershipPlans}</h2>
-                                                    <Image src={page.node.homePage.imagetest.sourceUrl} alt={page.node.homePage.imagetest.altText}/>
-                                                    <ul>
-                                                    {page.node.homePage.lists.map((item, key) => (
-                                                        <li key={key}>{item.listItem}</li>
-                                                    ))}                               
-                                           
-                                                    </ul>
-                                                </div>
-                                            )
-                                        })
-                                    }
-                                </div>
-                            )
-                        }
-                    }
-    
-                </Query>} */}
 
                 </LayoutDefault>
                 

@@ -814,12 +814,23 @@ header {
         width: 30%;
         position: relative;
         padding-top: 37px;
+
+        p.side {
+            font-size: 55px;
+            font-family: @teko;
+            display: inline-block;
+            letter-spacing: 1px;
+            position: absolute;
+            top: 178px;
+            left: -167px;
+            transform: rotate(-90deg);
+        }
         h1 {
             display: inline-block;
             padding-left: 66px;
         }
 
-        p:nth-of-type(2) {
+        .hero-san {
             padding-left: 66px;
             padding-right: 66px;
         }
@@ -839,17 +850,6 @@ header {
             z-index: -1;
         }
 
-    }
-
-    p:first-of-type {
-        font-size: 55px;
-        font-family: @teko;
-        display: inline-block;
-        letter-spacing: 1px;
-        position: absolute;
-        top: 178px;
-        left: -167px;
-        transform: rotate(-90deg);
     }
 }
 
