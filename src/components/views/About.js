@@ -3,6 +3,8 @@ import React, { Component } from 'react'
 import '../../assets/css/App.css';
 import LayoutDefault from '../layout/Layout';
 import Image from '../elements/Image';
+import Section from '../layout/Section';
+import DoubleCol from '../layout/DoubleCol';
 
 /***************************
  * IMAGES
@@ -21,6 +23,14 @@ class About extends Component {
                         <Image width="100%" src={Hero} alt="Guy Working Out" />
                         <h1 style={{ textTransform: 'uppercase' }} className="threeD">About Us</h1>
                     </div>
+
+                    <Section>
+                        <DoubleCol>
+                            <h2>Mission</h2>
+                            <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor.</h3>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                        </DoubleCol>
+                    </Section>
                 </LayoutDefault>
             </>
         );
