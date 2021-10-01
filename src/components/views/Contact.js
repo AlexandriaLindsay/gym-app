@@ -6,11 +6,13 @@ import Image from '../elements/Image';
 import Section from '../layout/Section';
 import DoubleCol from '../layout/DoubleCol';
 import { Link } from 'react-router-dom';
+import { Form, Input, TextArea, Button } from 'semantic-ui-react';
 
 /***************************
  * IMAGES
  **************************/
 import Hero from '../../assets/images/guy-working-out.jpg'
+import { ContactUs } from '../elements/ContactUs';
 
 
 class Contact extends Component {
@@ -40,13 +42,37 @@ class Contact extends Component {
                         </DoubleCol>
 
                         <DoubleCol>
-                            <form action="https://charlie.staging.prufs.ca/wp-json/contact-form-7/v1/contact-forms/37/feedback" method="POST">
-                                <input type="text" name="your-name" placeholder="First Name" required />
-                                <input type="email" name="your-email" placeholder="Email" required />
-                                <textarea name="your-message" placeholder="Message" required />
-                                <input type="submit" value="SEND" />
-                            </form>
-                            <div id="success-message"></div>
+                        <Form onSubmit={handleOnSubmit}>
+                            <Form.Field
+                            id='form-input-control-email'
+                            control={Input}
+                            label='Email'
+                            name='user_email'
+                            placeholder='Email…'
+                            required
+                            icon='mail'
+                            iconPosition='left'
+                            />
+                            <Form.Field
+                            id='form-input-control-last-name'
+                            control={Input}
+                            label='Name'
+                            name='user_name'
+                            placeholder='Name…'
+                            required
+                            icon='user circle'
+                            iconPosition='left'
+                            />
+                            <Form.Field
+                            id='form-textarea-control-opinion'
+                            control={TextArea}
+                            label='Message'
+                            name='user_message'
+                            placeholder='Message…'
+                            required
+                            />
+                            <Button type='submit' color='green'>Submit</Button>
+                        </Form>
                         </DoubleCol>
                     </Section>
 
