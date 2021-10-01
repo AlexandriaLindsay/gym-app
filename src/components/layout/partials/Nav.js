@@ -1,8 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
-import { scroll } from '../../../assets/js/Functions';
-
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 
 const Nav = ({
@@ -28,8 +27,8 @@ const Nav = ({
       >
         <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to='/' onClick={() => scroll('membership')}>Membership Plans</Link></li>
-            <li><Link to='/' onClick={() => scroll('sessions')}>Sessions</Link></li>
+            <li><AnchorLink href='#membership'>Membership Plans</AnchorLink></li>
+            <li><Link to='/#sessions'>Sessions</Link></li>
             <li><Link to='/contact'>Contact</Link></li>
         </ul>
       </nav>

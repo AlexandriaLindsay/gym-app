@@ -18,11 +18,6 @@ class Contact extends Component {
         document.title ="Contact — here is your page title to display"; 
         document.getElementsByTagName("META")[2].content="dYour description Contact the page or site here to set dynamically";
        
-        document.addEventListener( 'wpcf7mailsent', function( event ) {
-        if ( '37' == event.detail.contactFormId ) {
-            document.getElementById('success-message').innerHTML = '<p>Message Sent! We\'ll be in touch soon!</p>';
-        }
-       }, false );
         return (
             <>
                 <LayoutDefault>
@@ -31,7 +26,7 @@ class Contact extends Component {
                         <h1 style={{ textTransform: 'uppercase' }} className="threeD">Contact Us</h1>
                     </div>
 
-                    <Section>
+                    <Section className="contact">
                         <DoubleCol>
                             <h2>Mission</h2>
                             <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor.</h3>

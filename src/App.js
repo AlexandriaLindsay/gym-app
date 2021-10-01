@@ -15,7 +15,6 @@ const client = new ApolloClient({ uri: 'https://charlie.staging.prufs.ca/graphql
 
 
 function App() {
-
  
   return (
     <>
