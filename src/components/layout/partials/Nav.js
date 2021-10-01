@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import { scroll } from '../../../assets/js/Functions';
 
+
+
 const Nav = ({
   className,
   ID,
@@ -14,6 +16,8 @@ const Nav = ({
     className
   );
 
+  
+
   return (
     <>
       <nav
@@ -24,8 +28,8 @@ const Nav = ({
       >
         <ul>
             <li><Link to="/">Home</Link></li>
-            <li><Link to='/#membership' onClick={() => scroll('membership')}>Membership Plans</Link></li>
-            <li><Link to='/about-us'>About</Link></li>
+            <li><Link to='/' onClick={() => scroll('membership')}>Membership Plans</Link></li>
+            <li><Link to='/' onClick={() => scroll('sessions')}>Sessions</Link></li>
             <li><Link to='/contact'>Contact</Link></li>
         </ul>
       </nav>

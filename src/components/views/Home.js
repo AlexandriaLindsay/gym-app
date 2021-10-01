@@ -163,7 +163,7 @@ class Home extends Component {
                         </DoubleCol>
                     </Section>
 
-                    <Section className="popular-sessions">
+                    <Section id="sessions" className="popular-sessions">
                         <h2>Popular Sessions</h2>
 
                         <div className="session-block">

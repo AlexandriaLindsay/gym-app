@@ -9,9 +9,7 @@ import Home from './components/views/Home.js';
 import MenuModal from './components/elements/MenuModal';
 import Nav from './components/layout/partials/Nav';
 import Footer from './components/layout/partials/Footer';
-import About from './components/views/About';
 import Contact from './components/views/Contact';
-// import $ from 'jquery';
 
 const client = new ApolloClient({ uri: 'https://charlie.staging.prufs.ca/graphql' });
 
@@ -27,7 +25,6 @@ function App() {
           <Header ID="main-header" />
           {/* CONTENT */}
           <Route exact path='/' component={Home}/>
-          <Route path='/about-us' component={About}/>
           <Route path='/contact' component={Contact}/>
           {/* FOOTER */}
           <Footer />
