@@ -10,7 +10,6 @@ import MenuModal from './components/elements/MenuModal';
 import Nav from './components/layout/partials/Nav';
 import Footer from './components/layout/partials/Footer';
 import Contact from './components/views/Contact';
-import 'semantic-ui-css/semantic.min.css';
 
 const client = new ApolloClient({ uri: 'https://charlie.staging.prufs.ca/graphql' });
 
