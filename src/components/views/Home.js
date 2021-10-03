@@ -10,6 +10,7 @@ import { Query } from 'react-apollo'
 import gql from 'graphql-tag'
 import DOMPurify from 'dompurify';
 // import { Link } from 'react-router-dom';
+import "animate.css"
 
 /*****************************************
  * IMAGES
@@ -44,12 +45,14 @@ class Home extends Component {
                     role="main"
                 >
                     <div className="hero">
-                        <div className="hero-content">
+                        <div className="hero-content animate__animated animate__fadeInLeft animate__slow">
                             <p className="side">Find out if you can</p>
                             <h1 style={{ textTransform: 'uppercase' }}>Su<br />rvi<br />ve</h1>
-
+                            <div className="hero-san">
+                                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labor.</p>
+                            </div>
                             {/* START INTRO QUERY */}
-                            <Query query={gql`
+                            {/* <Query query={gql`
                                 {
                                     pages {
                                         edges {
@@ -85,7 +88,7 @@ class Home extends Component {
                                     }
                                 }
                 
-                            </Query>
+                            </Query> */}
                             {/* END INTRO QUERY */}
 
                             <div className="social">
@@ -95,58 +98,58 @@ class Home extends Component {
                             <Image className="arrow-graphic" src={Arrow} alt="Arrow Icon" />
                         </div>
 
-                        <div className="hero-img">
+                        <div className="hero-img animate__animated animate__fadeInRightBig animate__slow">
                             <Image src={Hero} alt="Weights in the Spartan Gym" />
                         </div>
                     </div>
 
                     <Section id="membership">
                         <DoubleCol>
-                            <DoubleCol>
+                            <div className="doubleCol animate__animated animate__fadeInTopLeft">
                                 <div className="grad"></div>
                                 <Image src={MemberImage} alt="Man Showing His Abs" />
                                 <div className="membership-content">
                                     <h3>12-Month Plan</h3>
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                                 </div>
-                            </DoubleCol>
+                            </div>
 
-                            <DoubleCol>
+                            <div className="doubleCol animate__animated animate__fadeInTopRight">
                                 <div className="grad"></div>
                                 <Image src={MemberImage2} alt="Woman Working Out" />
                                 <div className="membership-content">
                                     <h3>12-Month Plan</h3>
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                                 </div>
-                            </DoubleCol>
+                            </div>
 
-                            <DoubleCol>
+                            <div className="doubleCol animate__animated animate__fadeInBottomLeft">
                                 <div className="grad"></div>
                                 <Image src={MemberImage3} alt="Steel Weights" />
                                 <div className="membership-content">
                                     <h3>12-Month Plan</h3>
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                                 </div>
-                            </DoubleCol>
+                            </div>
 
-                            <DoubleCol>
+                            <div className="doubleCol animate__animated animate__fadeInBottomRight">
                                 <div className="grad"></div>
                                 <Image src={MemberImage4} alt="Fitness Equipment" />
                                 <div className="membership-content">
                                     <h3>12-Month Plan</h3>
                                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                                 </div>
-                            </DoubleCol>
+                            </div>
                         </DoubleCol>
 
-                        <DoubleCol>
+                        <div className="doubleCol animate__animated animate__fadeInRight animate__delay-1s">
                             <h2>Membership Plans</h2>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                             <Link style={{ textTransform: 'uppercase' }} to="/about-us" className="custom-btn">Sign Up</Link>
                             <Image className="arrow-graphic" src={Arrow} alt="Arrow Icon" />
-                        </DoubleCol>
+                        </div>
 
                     </Section>
 
