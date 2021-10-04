@@ -21,7 +21,7 @@ class Contact extends Component {
         return (
             <>
                 <LayoutDefault>
-                    <div className="sub-hero">
+                    <div id="sub-hero" className="sub-hero">
                         <Image width="100%" src={Hero} alt="Guy Working Out" />
                         <h1 style={{ textTransform: 'uppercase' }} className="threeD">Contact Us</h1>
                     </div>

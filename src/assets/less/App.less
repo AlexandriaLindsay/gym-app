@@ -8,7 +8,29 @@
 /**********************************
 * ANIMATIONS
 ***********************************/
-
+/* Small Devices, Tablets */
+@media screen and (max-width : 768px) {
+	.animate__animated {
+		/*CSS transitions*/
+		-o-transition-property: none !important;
+		-moz-transition-property: none !important;
+		-ms-transition-property: none !important;
+		-webkit-transition-property: none !important;
+		transition-property: none !important;
+		/*CSS transforms*/
+		-o-transform: none !important;
+		-moz-transform: none !important;
+		-ms-transform: none !important;
+		-webkit-transform: none !important;
+		transform: none !important;
+		/*CSS animations*/
+		-webkit-animation: none !important;
+		-moz-animation: none !important;
+		-o-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+	}
+}
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
@@ -221,8 +243,8 @@ html {
 #return-to-top i {
     margin: 0;
     position: relative;
-    left: 14px;
-    top: -8px; //may need to be adjusted
+    left: 1px;
+    top: -13px; //may need to be adjusted
     width: 0; 
     height: 0; 
     border-left: 7px solid transparent;
@@ -736,18 +758,19 @@ header {
 
 .site-logo {
     display: inline-block;
-    margin-left: 17px;
+    margin-left: 0px;
     width: 170px;
     margin-bottom: 0;
     position: relative;
     z-index: 65;
     @media @min992 {
+        margin-left: 17px;
         margin-left: 68px;
         width: auto;  
     }
 
     img {
-        width: 69px;
+        width: 166px;
         @media @min992 {
             width: auto;  
         }

@@ -47,6 +47,27 @@ const Home = ({
         });
     }, []);
      
+    const [scroll2, setScroll2] = useState(false);
+        useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll2(window.scrollY > 1650);
+        });
+    }, []);
+
+    const [scroll3, setScroll3] = useState(false);
+        useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll3(window.scrollY > 2550);
+        });
+    }, []);
+     
+    const [scroll4, setScroll4] = useState(false);
+        useEffect(() => {
+        window.addEventListener("scroll", () => {
+            setScroll4(window.scrollY > 4050);
+        });
+    }, []);
+     
     return (
         <>
             <LayoutDefault
@@ -162,7 +183,7 @@ const Home = ({
 
                 </Section>
 
-                <Section className="completed-challenges">
+                <Section className={ scroll2 ? 'completed-challenges animate__animated animate__fadeIn' : 'completed-challenges animate__animated animate__fadeOut' }>
                     <DoubleCol>
                         <p style={{ textTransform: 'uppercase' }}>Completed Challenges</p>
                         <h1>13</h1>
@@ -175,7 +196,7 @@ const Home = ({
                     </DoubleCol>
                 </Section>
 
-                <Section id="sessions" className="popular-sessions">
+                <Section id="sessions" className={ scroll3 ? 'popular-sessions animate__animated animate__fadeIn' : 'popular-sessions animate__animated animate__fadeOut' }>
                     <h2>Popular Sessions</h2>
 
                     <div className="session-block">
@@ -220,7 +241,7 @@ const Home = ({
 
                 <Section className="advice">
                     <h1>ADVICE</h1>
-                    <div className="advice-img">
+                    <div className={ scroll4 ? 'advice-img animate__animated animate__fadeIn' : 'advice-img animate__animated animate__fadeOut' }>
                         <div>
                             <h2>Survival Mode</h2>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
