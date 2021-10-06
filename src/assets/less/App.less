@@ -124,6 +124,45 @@
 /**********************************
 * GLOBAL
 ***********************************/
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+nav a {
+    position: relative;
+}
+
+nav a:before, nav a:after{
+    content: '';
+    position: absolute;
+    transition: transform .5s ease;
+}
+
+.hover-2 {
+    padding: 10px;
+  }
+  .hover-2:before, .hover-2:after {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    border-style: solid;
+    border-color: @white;
+    @media @min992 {
+        border-color: @red;
+    }
+  }
+  .hover-2:before {
+    border-width: 2px 0 2px 0;
+    transform: scaleX(0);
+  }
+  .hover-2:after {
+    border-width: 0 2px 0 2px;
+    transform: scaleY(0);
+  }
+  .hover-2:hover:before, .hover-2:hover:after {
+    transform: scale(1, 1);
+  }
 
 .opacity {
     opacity: .3;
@@ -403,38 +442,46 @@ html {
       font-size: 50px;
       font-weight: 400;
       text-align: left;
-      margin-top: 35px;
+      margin-top: 71px;
       margin-left: 20px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0 auto;
-      display: inline-block;
-      position: relative;
-      height: 100%;
-  
-      li {
+      &.nav-main {
         display: block;
-        position: relative;
-        opacity: 0;
-        margin: 0;
-  
-        a {
-          display: block;
-          position: relative;
-          color: @red;
-          text-decoration: none;
-          overflow: hidden;
-          font-size: 25px;
-          text-transform: normal;
-          margin-top: 0px;
-          font-weight: 500;
-          margin-bottom: 0;
-          &:hover {
-            opacity: .7;
+        float: none;
+        width: auto;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 auto;
+            display: inline-block;
+            position: relative;
+            height: 100%;
+        
+            li {
+              display: block;
+              position: relative;
+              opacity: 0;
+              margin: 0;
+              margin-bottom: 21px;
+        
+              a {
+                display: block;
+                position: relative;
+                color: @white;
+                text-decoration: none;
+                overflow: hidden;
+                font-size: 30px;
+                text-transform: normal;
+                margin-top: 0px;
+                font-weight: 500;
+                margin-bottom: 0;
+                padding: 0 10px;
+                padding-top: 5px;
+                @media @min768 {
+                    font-size: 45px;
+                }
+              }
+            }
           }
-        }
       }
     }
   }
@@ -831,11 +878,22 @@ header {
     }
 
     .hero-img {
-        width: 70%;
+        width: 100%;
+        @media @min992 {
+            width: 70%;
+        }
         
         img {
+            object-fit: cover;
+            object-position: 49%;
+            height: 450px;
             width: 100%;
             max-width: 100%;
+            @media @min992 {
+                object-position: unset;
+                object-fit: unset;
+                height: unset;
+            }
         }
     }
 
@@ -843,6 +901,10 @@ header {
         width: 30%;
         position: relative;
         padding-top: 37px;
+        display: none;
+        @media @min992 {
+            display: inline-block;
+        }
 
         p.side {
             font-size: 55px;
@@ -855,8 +917,11 @@ header {
             transform: rotate(-90deg);
         }
         h1 {
-            display: inline-block;
-            padding-left: 66px;
+            display: none;
+            @media @min992 {
+                display: inline-block;
+                padding-left: 66px;
+            }
         }
 
         .hero-san {

@@ -29,7 +29,7 @@ function App() {
           <Footer />
           {/* MODAL MENU */}
           <MenuModal>
-            <Nav />
+            <Nav className="overlay-menu" />
           </MenuModal>
         </BrowserRouter>
       </ApolloProvider>
