@@ -130,11 +130,16 @@ const Home = ({
 
                     <div className="hero-img animate__animated animate__fadeInRightBig animate__slow">
                         <Image src={Hero} alt="Weights in the Spartan Gym" />
+                        <div className="mobile-grad mobile"></div>
+                        <div className="mobile mobile-content">
+                            <h1 className="threeD">Spartan Gym &amp; Training</h1>
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+                        </div>
                     </div>
                 </div>
 
                 <Section id="membership" className="display-flex">
-                    <DoubleCol className="order-2">
+                    <div className="doubleCol order-2">
                         <div className={scroll ? "doubleCol animate__animated animate__fadeInTopLeft" : "doubleCol animate__animated animate__fadeOutTopLeft"}>
                             <div className="grad"></div>
                             <Image src={MemberImage} alt="Man Showing His Abs" />
@@ -170,7 +175,7 @@ const Home = ({
                                 <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                             </div>
                         </div>
-                    </DoubleCol>
+                    </div>
 
                     <div className={scroll ? "doubleCol animate__animated animate__fadeInRight animation__delay-2s" : "doubleCol animate__animated animate__fadeOutRight"}>
                         <h2>Membership Plans</h2>
@@ -241,8 +246,8 @@ const Home = ({
 
                 <Section className="advice">
                     <h1>ADVICE</h1>
-                    <div className={ scroll4 ? 'advice-img animate__animated animate__fadeIn' : 'advice-img animate__animated animate__fadeOut' }>
-                        <div>
+                    <div className={ scroll4 ? 'display-flex advice-img animate__animated animate__fadeIn' : 'display-flex advice-img animate__animated animate__fadeOut' }>
+                        <div className="order-2">
                             <h2>Survival Mode</h2>
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                         </div>
