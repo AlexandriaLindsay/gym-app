@@ -206,7 +206,7 @@ main {
 
 .doubleCol {
     padding: 0 0px;
-    margin-bottom: 23px;
+    margin-bottom: 13px;
     @media @min768 {
         padding: 0 0px;
     }
@@ -233,19 +233,26 @@ main {
 }
 
 .grad {
-    top: 173px;
-    bottom: 16px;
-    right: 11px;
-    left: 11px;
+    top: 0px;
+    bottom: 5px;
+    right: 0px;
+    left: 0px;
     position: absolute;
     background: -moz-linear-gradient(top, rgba(0,0,0,0) -1%, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 59%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
     background: -webkit-linear-gradient(top, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 59%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to bottom, rgba(0,0,0,0) -1%,rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 59%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 );
+    @media @min992 {
+        top: 173px;
+        bottom: 16px;
+        right: 11px;
+        left: 11px;
+    }
 }
 
 .grecaptcha-badge {
     opacity: 0 !important;
+    bottom: 16px
 }
 .error404 {
     .hero.sub-hero {
@@ -641,7 +648,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 34px;
     color: @black;
     @media @min992 {
         font-size: 60px;
@@ -965,7 +972,10 @@ header {
 
 #membership {
     margin-bottom: 0;
-    margin-top: 121px;
+    margin-top: 56px;
+    @media @min992 {
+        margin-top: 121px;
+    }
     .arrow-graphic {
         position: absolute;
         width: 150px;
@@ -977,33 +987,65 @@ header {
     .doubleCol {
         padding: 0;
         position: relative;
-        padding: 12px;
+        padding: 0px;
         transition: .3s;
+        margin-bottom: 8px;
+        @media @min992 {
+            margin-bottom: 0;
+            padding: 12px;
+        }
         .membership-content {
             position: absolute;
-            bottom: -5%;
-            left: 52%;
+            bottom: 0;
+            left: 50%;
             width: 80%;
             transform: translate(-50%,-50%);
+            @media @min992 {
+                bottom: -5%;  
+                left: 52%;
+            }
             p,h2 {
                 color: @white;
+            }
+            p {
+                margin: 0;
             }
         }
     }
     & > .doubleCol:first-of-type {
-        width: 64%;
+        width: 100%;
+        margin-top: 54px;
+        @media @min992 {
+            margin-top: 0;
+            width: 64%;
+        }
     }
 
     & > .doubleCol:nth-of-type(2) {
-        width: 36%;
-        padding-left: 93px;
+        width: 100%;
+        @media @min992 {
+            padding-left: 93px;
+            width: 36%;
+        }
     }
 }
 
 .completed-challenges {
-    margin-top: 95px;
+    margin-top: 77px;
+    margin-bottom: 81px;
+    @media @min992 {
+        margin-bottom: 0;
+        margin-top: 95px;
+    }
     .doubleCol {
         padding: 0;
+    }
+
+    .doubleCol:nth-of-type(2) {
+        display: none;
+        @media @min992 {
+            display: inline-block;
+        }
     }
 
     .doubleCol:first-of-type {
@@ -1012,17 +1054,27 @@ header {
             font-size: 18px;
             margin-bottom: 40px;
         }
-        padding-left: 152px;
-        padding-right: 312px;
+        padding-left: 0px;
+        padding-right: 0px;
+        @media @min992 {
+            padding-left: 152px;
+            padding-right: 312px;
+        }
     }
 
     h1 {
-        font-size: 280px;
+        font-size: 239px;
+        @media @min992 {
+            font-size: 280px;
+        }
     }
     span {
-        font-size: 60px;
+        font-size: 34px;
         font-family: @teko;
         color: @red;
+        @media @min992 {
+            font-size: 60px;
+        }
     }
 }
 

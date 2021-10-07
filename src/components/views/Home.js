@@ -133,8 +133,8 @@ const Home = ({
                     </div>
                 </div>
 
-                <Section id="membership">
-                    <DoubleCol>
+                <Section id="membership" className="display-flex">
+                    <DoubleCol className="order-2">
                         <div className={scroll ? "doubleCol animate__animated animate__fadeInTopLeft" : "doubleCol animate__animated animate__fadeOutTopLeft"}>
                             <div className="grad"></div>
                             <Image src={MemberImage} alt="Man Showing His Abs" />
