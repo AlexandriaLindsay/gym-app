@@ -10,6 +10,7 @@ import MenuModal from './components/elements/MenuModal';
 import Nav from './components/layout/partials/Nav';
 import Footer from './components/layout/partials/Footer';
 import Contact from './components/views/Contact';
+import ScrollToTop from './components/elements/ScrollToTop';
 
 const client = new ApolloClient({ uri: 'https://charlie.staging.prufs.ca/graphql' });
 
@@ -22,6 +23,7 @@ function App() {
         <BrowserRouter>
           {/* HEADER */}
           <Header ID="main-header" />
+          <ScrollToTop/>
           {/* CONTENT */}
           <Route exact path='/' component={Home}/>
           <Route path='/contact' component={Contact}/>
