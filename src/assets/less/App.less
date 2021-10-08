@@ -9,7 +9,7 @@
 * ANIMATIONS
 ***********************************/
 /* Small Devices, Tablets */
-@media screen and (max-width : 992px) {
+@media screen and (max-width : 1500px) {
 	.animate__animated {
 		/*CSS transitions*/
 		-o-transition-property: none !important;
@@ -856,10 +856,17 @@ header {
     width: 36%;
     @media @min992 {
         display: inline-block;
+        width: 48%;
+        margin-top: 60px;
+    }
+    @media @min1200 {
+        width: 41%;
     }
     @media @min1500 {
         margin-top: 45px;
+        width: 41%;
     }
+ 
     ul {
         li {
             display: inline-block;
@@ -989,6 +996,13 @@ header {
         left: 10%;
         color: @white;
         text-shadow: -7px 7px 1px @red;
+        font-size: 41px;
+        @media @min992 {
+            font-size: 121px;
+        }
+        @media @min1500 {
+            font-size: 176px;
+        }
     }
 }
 
@@ -1045,11 +1059,25 @@ header {
             margin-top: 0;
             width: 64%;
         }
+
+        .doubleCol {
+            @media @min768 {
+                width: 49%;
+                margin-right: 7px;
+            }
+            @media @min992 {
+                width: 49%;
+                margin-right: 0px;
+            }
+        }
     }
 
     & > .doubleCol:nth-of-type(2) {
         width: 100%;
         @media @min992 {
+            width: 36%;
+        }
+        @media @min1500 {
             padding-left: 93px;
             width: 36%;
         }
@@ -1083,8 +1111,12 @@ header {
         padding-left: 0px;
         padding-right: 0px;
         @media @min992 {
+            padding-left: 58px;
+            padding-right: 151px;
+        }
+        @media @min1500 {
             padding-left: 152px;
-            padding-right: 312px;
+            padding-right: 282px;
         }
     }
 
@@ -1139,9 +1171,13 @@ header {
     text-align: right;
     h1 {
         position: absolute;
-        top: 248px;
-        left: -153px;
+        top: 190px;
+        left: -158px;
         transform: rotate(-90deg);
+        @media @min1500 {
+            top: 248px;
+            left: -153px; 
+        }
     }
 
     .advice-img {
@@ -1158,6 +1194,14 @@ header {
             background-color: @offWhite;
             margin-top: 38px;
             @media @min992 {
+                margin-top: 0;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 66%;
+                padding: 52px 52px;
+            }
+            @media @min1500 {
                 margin-top: 0;
                 position: absolute;
                 left: 0;
@@ -1214,8 +1258,17 @@ footer {
 * CONTACT PAGE
 ***********************************/
 .contact {
+    margin-top: 60px;
+    @media @min992 {
+        margin-top: 180px;
+    }
     .doubleCol:first-of-type {
-        padding-right: 200px;
+        padding-right: 0px;
+        margin-bottom: 70px;
+        @media @min992 {
+            margin-bottom: 0;
+            padding-right: 200px;
+        }
         h3 {
             color: @black;
         }
@@ -1238,6 +1291,7 @@ form {
         margin-top: 20px;
         color: @red !important;
         width: 150px !important;
+        margin-left: 0;
         &:hover {
             color: @white !important;
         }

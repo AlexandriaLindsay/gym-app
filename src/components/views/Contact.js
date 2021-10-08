@@ -26,7 +26,7 @@ class Contact extends Component {
                         <h1 style={{ textTransform: 'uppercase' }} className="threeD">Contact Us</h1>
                     </div>
 
-                    <Section className="contact">
+                    <Section className="contact width-1700">
                         <DoubleCol>
                             <h2>Mission</h2>
                             <h3>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy tempor.</h3>
