@@ -43,28 +43,32 @@ const Home = ({
     const [scroll, setScroll] = useState(false);
         useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll(window.scrollY > 750);
+            let membership = document.getElementById('membership');
+            setScroll(window.scrollY > membership.offsetTop - 200);
         });
     }, []);
      
     const [scroll2, setScroll2] = useState(false);
         useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll2(window.scrollY > 1650);
+            let challenge = document.getElementById('challenge');
+            setScroll2(window.scrollY >= challenge.offsetTop - 500);
         });
     }, []);
 
     const [scroll3, setScroll3] = useState(false);
         useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll3(window.scrollY > 2550);
+            let sessions = document.getElementById('sessions');
+            setScroll3(window.scrollY > sessions.offsetTop - 500);
         });
     }, []);
      
     const [scroll4, setScroll4] = useState(false);
         useEffect(() => {
         window.addEventListener("scroll", () => {
-            setScroll4(window.scrollY > 4050);
+            let advice = document.getElementById('advice');
+            setScroll4(window.scrollY > advice.offsetTop - 300);
         });
     }, []);
      
@@ -188,7 +192,7 @@ const Home = ({
 
                 </Section>
 
-                <Section className={ scroll2 ? 'completed-challenges animate__animated animate__fadeIn' : 'completed-challenges animate__animated animate__fadeOut' }>
+                <Section id="challenge" className={ scroll2 ? 'completed-challenges animate__animated animate__fadeIn' : 'completed-challenges animate__animated animate__fadeOut' }>
                     <DoubleCol>
                         <p style={{ textTransform: 'uppercase' }}>Completed Challenges</p>
                         <h1>13</h1>
@@ -244,7 +248,7 @@ const Home = ({
                     </div>
                 </Section>
 
-                <Section className="advice">
+                <Section id="advice" className="advice">
                     <h1>ADVICE</h1>
                     <div className={ scroll4 ? 'display-flex advice-img animate__animated animate__fadeIn' : 'display-flex advice-img animate__animated animate__fadeOut' }>
                         <div className="order-2">
