@@ -1,4 +1,3 @@
-import { hot } from 'react-hot-loader/root';
 import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
@@ -39,4 +38,4 @@ function App() {
   );
 }
 
-export default hot(App);
+export default App;

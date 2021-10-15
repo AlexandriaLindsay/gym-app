@@ -1,4 +1,4 @@
-import { hot } from 'react-hot-loader/root';
+// import { hot } from 'react-hot-loader/root';
 import React, { useEffect, useState } from "react";
 import '../../assets/css/App.css';
 import LayoutDefault from '../layout/Layout';
@@ -15,7 +15,6 @@ import "animate.css"
 /*****************************************
  * IMAGES
  *****************************************/
-import Hero from '../../assets/images/weights-in-gym.jpg';
 import Social from '../../assets/images/social.svg';
 import MemberImage from '../../assets/images/guy-with-abs.jpg';
 import MemberImage2 from '../../assets/images/woman-working-out.jpg';
@@ -82,11 +81,8 @@ const Home = ({
                     <div className="hero-content animate__animated animate__fadeInLeft animate__slow">
                         <p className="side">Find out if you can</p>
                         <h1 style={{ textTransform: 'uppercase' }}>Su<br />rvi<br />ve</h1>
-                        <div className="hero-san">
-                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labor.</p>
-                        </div>
                         {/* START INTRO QUERY */}
-                        {/* <Query query={gql`
+                        <Query query={gql`
                             {
                                 pages {
                                     edges {
@@ -122,7 +118,7 @@ const Home = ({
                                 }
                             }
             
-                        </Query> */}
+                        </Query>
                         {/* END INTRO QUERY */}
 
                         <div className="social">
@@ -133,7 +129,49 @@ const Home = ({
                     </div>
 
                     <div className="hero-img animate__animated animate__fadeInRightBig animate__slow">
-                        <Image src={Hero} alt="Weights in the Spartan Gym" />
+                           {/* START INTRO QUERY */}
+                           <Query query={gql`
+                             {
+                                pages {
+                                    edges {
+                                        node {
+                                            content
+                                              home {
+                                              heroImage {
+                                                sourceUrl(size: FULL),
+                                                altText
+                                              }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        `
+            
+                        }>
+                            {
+                                ({ loading, error, data }) => {
+                                    if (loading) return '';
+                                    if (error) return `Error! ${error.message}`;
+            
+                                    return(
+                                        <>
+                                            {
+                                                data.pages.edges.map((page, key) => {
+                                                    return(
+                                                        <div key={key}>
+                                                            <Image src={page.node.home.heroImage.sourceUrl} alt={page.node.home.heroImage.altText} />
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </>
+                                    )
+                                }
+                            }
+            
+                        </Query>
+                        {/* END INTRO QUERY */}
                         <div className="mobile-grad mobile"></div>
                         <div className="mobile mobile-content">
                             <h1 className="threeD">Spartan Gym &amp; Training</h1>
@@ -265,4 +303,4 @@ const Home = ({
     );
 }
 
-export default hot(Home);
+export default Home;

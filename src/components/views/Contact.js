@@ -1,4 +1,3 @@
-import { hot } from 'react-hot-loader/root';
 import React, { Component } from 'react'
 import '../../assets/css/App.css';
 import LayoutDefault from '../layout/Layout';
@@ -48,4 +47,4 @@ class Contact extends Component {
     }
   
 }
-export default hot(Contact);
+export default Contact;
