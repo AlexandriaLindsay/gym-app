@@ -16,12 +16,13 @@ const Header = ({
     'header',
     'width-1700',
     'animate__animated animate__fadeInDown',
-    'animate__delay-1s',
+    'animate__delay-2s',
     className
   );
 
   return (
     <>
+      <a class="skip-link screen-reader-text" href="#content">Skip to Content</a>
       <header
         {...props}
         className={classes}

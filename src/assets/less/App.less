@@ -124,6 +124,56 @@
 /**********************************
 * GLOBAL
 ***********************************/
+.loading-container {
+    background-color: @white;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 20000000;
+    opacity: 1;
+    animation: hide 2s ease-in-out 3s forwards;
+}
+.loading {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: @red transparent @red;
+  animation: spin 4s ease-in-out forwards;
+  position: absolute;
+  top: 48%;
+  left: 48%;
+  transform: translate(-50%,-50%);
+  opacity: 1;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+
+  25% {
+    transform: rotate(250deg);
+  }
+  
+  50% { transform: rotate(459deg); }
+
+  75% { transform: rotate(659deg); }
+
+  100% { transform: rotate(859deg); opacity: 0; }
+}
+
+@keyframes hide {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        z-index: -5000000;
+    }
+}
+
 .mobile-grad {
     .gradPosition();
     bottom: 4px;

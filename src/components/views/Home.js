@@ -73,12 +73,16 @@ const Home = ({
      
     return (
         <>
+            <div className="loading-container">
+                <div className="loading"></div>
+            </div>
+
             <LayoutDefault
                 className="content content-wrapper width-1500"
                 role="main"
             >
                 <div className="hero">
-                    <div className="hero-content animate__animated animate__fadeInLeft animate__slow">
+                    <div className="hero-content animate__animated animate__fadeInLeft animate__delay-3s animate__slow">
                         <p className="side">Find out if you can</p>
                         <h1 style={{ textTransform: 'uppercase' }}>Su<br />rvi<br />ve</h1>
                         {/* START INTRO QUERY */}
@@ -128,7 +132,7 @@ const Home = ({
                         <Image className="arrow-graphic" src={Arrow} alt="Arrow Icon" />
                     </div>
 
-                    <div className="hero-img animate__animated animate__fadeInRightBig animate__slow">
+                    <div className="hero-img animate__animated animate__fadeInRightBig animate__delay-3s animate__slow">
                            {/* START INTRO QUERY */}
                            <Query query={gql`
                              {
