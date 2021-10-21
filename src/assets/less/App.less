@@ -135,6 +135,14 @@
     opacity: 1;
     animation: hide 2s ease-in-out 3s forwards;
 }
+
+.center-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
 .loading {
   width: 100px;
   height: 100px;
@@ -142,10 +150,6 @@
   border: 8px solid;
   border-color: @red transparent @red;
   animation: spin 4s ease-in-out forwards;
-  position: absolute;
-  top: 48%;
-  left: 48%;
-  transform: translate(-50%,-50%);
   opacity: 1;
 }
 

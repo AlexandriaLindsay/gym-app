@@ -2,7 +2,7 @@ import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 import Header from './components/layout/partials/Header';
-import { BrowserRouter, Route } from 'react-router-dom'
+import { BrowserRouter, Route, Redirect } from 'react-router-dom'
 import './assets/css/App.css';
 import Home from './components/views/Home.js';
 import MenuModal from './components/elements/MenuModal';
@@ -26,6 +26,7 @@ function App() {
           {/* CONTENT */}
           <Route exact path='/' component={Home}/>
           <Route path='/contact' component={Contact}/>
+          <Redirect to='/' />
           {/* FOOTER */}
           <Footer />
           {/* MODAL MENU */}

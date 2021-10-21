@@ -74,7 +74,9 @@ const Home = ({
     return (
         <>
             <div className="loading-container">
-                <div className="loading"></div>
+                <div className="center-loading">
+                    <div className="loading"></div>
+                </div>
             </div>
 
             <LayoutDefault
